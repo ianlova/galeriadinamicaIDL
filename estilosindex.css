@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: url(imagenes/w1.jpg);
+    background-size: cover;
+    height: 100%;       
+}
+h1{
+    margin: 40px auto;    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 800px; 
+    height: 60px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    font-weight: 400;
+    font-size: 60px;
+}
+.todo{
+    margin-top: 20px;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+}
+.ingresos{
+    background: rgba(0, 0, 0, 0.529);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0,0,0,0) 100%);    
+    display: flex;
+    width: 40%;
+    height: 200px;
+    padding: 15px;
+    margin: 0 25px 0 25px;
+    justify-content: center;
+}
+
+.ingresos div label{     
+    display: flex;          
+    font-size: 22px;
+    width: 100%;
+    height: 35px;
+    align-items: center;    
+    padding: 5px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.ingresos .ingresartitulo{
+    margin-top: 27px;
+}
+.ingresos input{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    border-style: none;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.418);
+    height: 40px;
+    width: 400px;
+    padding: 5px;    
+    font-weight: 600;
+    font-size: 20px;   
+    
+}
+.ingresos input[type="submit"]:hover{
+    transform: scale(1.05);
+}
+
+.archivos{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px; 
+    position: relative;
+    width: 50%;
+    margin: auto;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.418);
+    padding: 15px;     
+    height: 70vh; 
+}
+
+
+.archivos .pedirarchivos{
+    position: relative;
+    background: rgb(46,46,46);
+    background: radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 100%);
+    margin: 15px auto;
+    padding: 120px;
+    height: 400px;    
+    border-radius: 0;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.266);
+    -webkit-border-radius:10px;    
+    transition: 0.7s;
+}
+.archivos .pedirarchivos:hover{
+    transform: scale(1.01);
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.75);
+}
+
+div .pedirarchivos input{
+    text-emphasis-style: none;
+}
+div .pedirarchivos:has(input:valid){
+    opacity: 60%;
+    box-shadow: none;
+    
+}
+
+
+.archivos .file{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.archivos label{
+    display: flex;
+    text-align: center;
+    margin-top: 10%;
+    justify-content: center;
+    color: rgb(255, 255, 255);    
+    font-size: 1.8rem;
+}
+.archivos input[type="submit"]{
+    padding: 10px;
+    position: absolute;
+    
+    right: 4%;
+    bottom: 10%;
+    border-radius: 10px;
+    border-style: none;
+    width: 15%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(223, 223, 223) 150%);
+    transition: 0.7s;
+    z-index: 10000;
+}
+.archivos input[type="submit"]:hover{
+    transform: scale(1.1);
+}

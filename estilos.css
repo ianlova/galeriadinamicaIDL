@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: url(imagenes/w1.jpg);
+    background-size:cover;    
+    height: 100%;
+}
+h1{
+    margin: 40px auto;    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 800px; 
+    height: 60px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+}
+.imagenes{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    width: 1000px;
+    height: 320px;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenes img{
+    position: absolute;
+    opacity: 0;
+    transition: all 0.1s;   
+    border-radius: 10px; 
+    height: 300px;
+    width: auto;
+    pointer-events: none;
+}
+.botones{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(158,158,158,1) 150%);
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    width: 220px;
+    height: 30px;
+    display: flex;
+    margin: 30px auto;    
+}
+.botones ul{
+    display: flex;
+    margin: auto;
+}
+.botones li{
+    display: flex;
+    list-style: none;
+    margin: 7px;
+}
+.botones input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fffffff5;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 1.8px solid #444444;
+    transition: all 0.8s;    
+}
+.botones input[type="radio"]:hover{
+    transform: scale(1.1);
+}
+.botones input[type="radio"]:checked {
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+.menutipografia{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 0;
+    border-radius: 0 0 0 10px;
+    width: 16%;
+    height: 210px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.75);
+    justify-content: center;    
+    top: -175px;
+    transition: 0.5s;    
+    z-index: 10000000;
+    flex-wrap: wrap;
+}
+.menutipografia label{
+    margin: auto;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.menutipografia img{
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    transition: all 0.5s;
+}
+.menutipografia .tipografias{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    height: 180px;    
+}
+.menutipografia .tipografias .tipografias-list{
+    display: block;
+    height: 30px;
+    width: 130px;
+    border-bottom: solid 1.5px rgba(0, 0, 0, 0.212);      
+    padding: 2px;
+    margin: 0;
+}
+.menutipografia .tipografias .tipografias-list input{
+   display:none;
+}
+.menutipografia .tipografias .tipografias-list label[id="label0"]{    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.menutipografia .tipografias .tipografias-list label[id="label1"]{
+    font-family: 'Castoro Titling', cursive;
+    font-size: 11px;
+}
+.menutipografia .tipografias .tipografias-list label[id="label2"]{
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    display: flex;
+    align-items: start;
+}
+.menutipografia .tipografias .tipografias-list label[id="label3"]{
+    font-family: 'Bruno Ace', cursive;
+}
+.menutipografia .tipografias .tipografias-list label[id="label4"]{
+    font-family: 'Sigmar', cursive;
+    font-size: 13px;
+}
+.titulo-tipografia-container:has(.tipografias input[id="boton0"]:checked) .titulo h1{ 
+    font-family: 'Roboto', sans-serif;
+}
+.titulo-tipografia-container:has(.tipografias input[id="boton1"]:checked) .titulo h1{
+    font-family: 'Castoro Titling', cursive;
+}
+.titulo-tipografia-container:has(.tipografias input[id="boton2"]:checked) .titulo h1{
+    font-family: 'Lobster', cursive;
+}
+.titulo-tipografia-container:has(.tipografias input[id="boton3"]:checked) .titulo h1{
+    font-family: 'Bruno Ace', cursive;
+}
+.titulo-tipografia-container:has(.tipografias input[id="boton4"]:checked) .titulo h1{
+    font-family: 'Sigmar', cursive;    
+}
+.ocultarmenus{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 10px 0 0;
+    width: 35px;
+    height: 35px;    
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.75);
+    transition: all ease-in-out 0.5s;    
+    z-index: 10000000;
+}
+.ocultarmenus img{
+    margin: 2px auto;
+    width: 30px;
+    height: 30px;
+    transition: all 0.7s;
+}
+.ocultarmenus img:hover{
+    transform: scale(1.2);
+}
+
+.menufondo{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 0;
+    bottom: -3px;
+    border-radius: 10px 0 0 0;
+    width: 16%;
+    height: 35px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.75);
+    justify-content: center;    
+    
+    transition: all ease-in-out 0.5s;    
+    z-index: 10000000;
+    flex-wrap: wrap;
+}
+.menufondo label{
+    margin: auto;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;    
+    
+    
+}
+.menufondo button{
+    width: 10px;
+    height: 10px;
+    
+}
+.fondo{        
+    display: flex;
+    position: absolute;
+    width: 75%;
+    flex-wrap: nowrap;
+    overflow: auto;
+    background: rgb(46,46,46);
+    background: radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 100%);
+    margin: 5px auto;                
+    padding: 5px 5px 0 5px ;
+    border-radius: 10px 10px;    
+    opacity: 0;
+    transition: all ease-in-out 0.5s;  
+    left: -600%;  
+}
+.fondo::-webkit-scrollbar{
+    display: flex;    
+    border-radius: 10px 10px;
+    
+}
+.fondo::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(158,158,158,1) 150%);
+    color: brown;    
+    height: 1px;
+}
+.fondo img{
+    height: 80px;
+    width: auto;
+    margin: 10px 9.5px 8px 9.5px;
+    box-shadow: 4px 4px 16px 0px rgba(80, 80, 80, 0.301);
+    transition: 0.3s;
+}
+.fondo img:hover{
+    
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.511);
+}
+img.icono{
+    width: 12px;
+    height: 12px;
+    margin: auto;   
+    transition: all 0.5s;
+}
+img.icono:hover{
+    transform: scale(1.1);
+}
+input[type=checkbox]{
+    display:none;
+}
+.boton{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;   
+    width: 180px;     
+
+}
+.boton label{
+    font-size: 15px;
+}
+
+#btnmenufondo:checked ~ .fondo{    
+    transition: 1s;
+    left: 12.5%;
+    opacity: 100;
+    margin: 5px auto;                
+    padding: 5px 5px 0 5px ;
+}
+#btnmenuocultar:checked ~ .menutipografia,#btnmenuocultar:checked ~ .menufondo,#btnmenuocultar:checked ~ .ocultarmenus, #btnmenuocultar:checked ~ .fondo{
+    opacity: 0; 
+}
+#btnmenuocultar2:checked ~ .menutipografia{
+    opacity: 0; 
+}
+#btnmenutipo:checked ~ .menutipografia{
+    top: 0%;
+    transition-duration: 0.5s;
+}
+.Galeria .imagenes img:first-child {
+    animation: cambio-imagen 5s infinite;
+}
+
+.Galeria .imagenes img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .Galeria .botones li label {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  .Galeria .botones li input[type="radio"] {
+    display: none;
+  }
+  
+  .Galeria .botones li input[type="radio"]:checked+label {
+    background: #333;
+  }
+  
